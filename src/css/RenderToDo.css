@@ -1,0 +1,11 @@
+.todo-list p {
+  margin: 10px 0;
+}
+
+.complete {
+  background-color: #5cb85c;
+}
+
+.delete {
+  background-color: #f73852;
+}

@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap");
+
+:root {
+  --playfair-display: "Playfair Display", serif;
+  --plus-jakarta-sans: "Plus Jakarta Sans", sans-serif;
+  --primary-color: #333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+input {
+  border: none;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+body {
+  background-image: url("./assets/RectLight.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.app {
+  font-family: var(--plus-jakarta-sans);
+  background-color: white;
+  padding: 20px 30px;
+  color: var(--primary-color);
+  border-radius: 5px;
+  border: 2px solid #acc6fc;
+  max-width: 700px;
+  margin: 0 auto 300px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.app h1 {
+  text-align: center;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.app h2 {
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: var(--primary-color);
+  background-color: #4a5ea1;
+  color: white;
+  padding: 5px 10px;
+
+  border-radius: 3px;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: 0.3s;
+  margin-right: 10px;
+}
+button:hover {
+  opacity: 1;
+}
+
+.todo-list {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.todo-list-container {
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter,
+.search {
+  border-bottom: 1px solid var(--primary-color);
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+select {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid var(--primary-color);
+  padding: 0 1em 0 0;
+  margin: 0;
+  width: 50%;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+}
