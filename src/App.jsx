@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./app.css";
+import "./App.css";
 import RenderToDo from "./components/RenderToDo";
 import RenderToDoForm from "./components/ToDoForm";
 import Search from "./components/Search";
