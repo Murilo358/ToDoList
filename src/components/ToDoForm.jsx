@@ -50,9 +50,9 @@ function ToDoForm({ addToDo }) {
             value={description}
             onChange={setDescription}
           />
+          <button type="submit">Criar tarefa</button>
         </form>
       </div>
-      <button type="submit">Criar tarefa</button>
     </div>
   );
 }
