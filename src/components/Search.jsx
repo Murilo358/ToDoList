@@ -1,4 +1,4 @@
-import "../css/search.css";
+import "../css/Search.css";
 
 const Search = ({ search, setSearch }) => {
   return (
