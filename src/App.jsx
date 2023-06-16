@@ -4,6 +4,7 @@ import RenderToDo from "./components/RenderToDo";
 import RenderToDoForm from "./components/ToDoForm";
 import Search from "./components/Search";
 import Filter from "./components/Filter";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   const [todo, setTodos] = useState([]);
@@ -79,7 +80,7 @@ function App() {
   const [sortDate, setSortDate] = useState("Crescente");
 
   return (
-    <div className="app">
+    <div className="app gx-0 container custom-container">
       <Search search={search} setSearch={setSearch} />
       <Filter
         filter={filter}

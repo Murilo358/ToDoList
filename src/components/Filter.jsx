@@ -35,7 +35,7 @@ function Filter({ filter, setFilter, setSort, setSortDate }) {
           </div>
         </div>
         <div className="filter-options-buttons-div">
-          <p>Ordem Alfabetica:</p>
+          <p>Alfabetica:</p>
           <div className="filter-option-buttons">
             <button
               onClick={() => {

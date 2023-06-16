@@ -25,25 +25,21 @@ body {
   background-size: cover;
   min-height: 100vh;
   padding: 30px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
 }
 
 .app {
   font-family: var(--plus-jakarta-sans);
-  border-radius: 0px;
   background: linear-gradient(145deg, #cacaca, #f0f0f0);
-  box-shadow: 11px 11px 62px #d5d5d5, -11px -11px 62px #ebebeb;
   color: var(--primary-color);
   border-radius: 5px;
-  border: 2px solid #acc6fc;
-  min-width: 800px;
-  max-width: 800px;
-  margin: 0 auto 300px;
+  padding: 0px;
+
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.custom-container.container {
+  max-width: 700px;
 }
 
 .app input {
