@@ -109,8 +109,8 @@ function App() {
           )
           .sort((a, b) =>
             sortDate === "Crescente"
-              ? a.date.localeCompare(b.date)
-              : b.date.localeCompare(a.date)
+              ? b.date.localeCompare(a.date)
+              : a.date.localeCompare(b.date)
           )
 
           .map((todo) => (

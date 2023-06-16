@@ -1,5 +1,7 @@
 import "../css/RenderToDo.css";
 import React from "react";
+import { AiOutlineCheck } from "react-icons/ai";
+import { FaTrashAlt } from "react-icons/fa";
 
 function RenderToDo({ todo, removeToDo, completeToDo }) {
   return (
@@ -17,17 +19,20 @@ function RenderToDo({ todo, removeToDo, completeToDo }) {
         </p>
         <div className="todo-list-content__description">
           <p>Descrição:</p>
-          <div dangerouslySetInnerHTML={{ __html: todo.description }} />
+          <div
+            className="desc"
+            dangerouslySetInnerHTML={{ __html: todo.description }}
+          />
         </div>
       </div>{" "}
       <p className="todo-list-content__date">{todo.date}</p>
       <div className="todo-list-content__buttons-date">
         {" "}
         <button onClick={() => completeToDo(todo.id)} className="complete">
-          Completar
+          <AiOutlineCheck />
         </button>
         <button onClick={() => removeToDo(todo.id)} className="delete">
-          X
+          <FaTrashAlt />
         </button>
       </div>
     </div>

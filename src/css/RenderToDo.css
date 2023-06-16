@@ -9,16 +9,35 @@
 .delete {
   background-color: #f73852;
 }
-.todo-list-content__description {
-  display: flex;
+.todo-list-content__buttons-date button {
+  border-radius: 100%;
 }
+
+.todo-list {
+  margin-bottom: 20px;
+  /* padding: 25px; */
+}
+
 .todo-list-container {
   position: relative;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.desc {
+  padding-right: 10px;
+  word-break: break-all;
 }
 
 .todo-list-content__buttons-date {
   display: flex;
-  flex-direction: column;
+  gap: 7px;
 }
 
 .todo-list-content__date {
