@@ -1,4 +1,27 @@
-.filter-options p,
-.filter-options select {
+.filter-options p {
   margin-bottom: 20px;
+}
+
+.filter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter-options {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.filter-options-buttons-div,
+.filter-options-select {
+  text-align: center;
+  flex: 1;
+}
+
+.filter-options-select select {
+  width: 70%;
+  text-align: center;
 }

@@ -1,32 +1,55 @@
 import "../css/Filter.css";
 
-function Filter({ filter, setFilter, setSort }) {
+import { IoChevronUp, IoChevronDownSharp } from "react-icons/io5";
+
+function Filter({ filter, setFilter, setSort, setSortDate }) {
   return (
     <div className="filter">
-      <h2>Filtrar:</h2>
+      <h2>Filtrar</h2>
       <div className="filter-options">
-        <div>
-          <p>Status:</p>
+        <div className="filter-options-select">
+          <p>Por status</p>
           <select value={filter} onChange={(ev) => setFilter(ev.target.value)}>
             <option value="All">Todas</option>
             <option value="Completed">Completas</option>
             <option value="Incompleted">Incompletas</option>
           </select>
-          <div>
-            <p>Ordem Alfabetica:</p>
+        </div>
+        <div className="filter-options-buttons-div">
+          <p>Por data</p>
+          <div className="filter-option-buttons">
+            <button
+              onClick={() => {
+                setSortDate("Crescente");
+              }}
+            >
+              <IoChevronUp />
+            </button>
+            <button
+              onClick={() => {
+                setSortDate("Decrescente");
+              }}
+            >
+              <IoChevronDownSharp />
+            </button>
+          </div>
+        </div>
+        <div className="filter-options-buttons-div">
+          <p>Ordem Alfabetica:</p>
+          <div className="filter-option-buttons">
             <button
               onClick={() => {
                 setSort("Crescente");
               }}
             >
-              Crescente
+              <IoChevronUp />
             </button>
             <button
               onClick={() => {
                 setSort("Decrescente");
               }}
             >
-              Decrescente
+              <IoChevronDownSharp />
             </button>
           </div>
         </div>

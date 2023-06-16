@@ -9,3 +9,20 @@
 .delete {
   background-color: #f73852;
 }
+.todo-list-content__description {
+  display: flex;
+}
+.todo-list-container {
+  position: relative;
+}
+
+.todo-list-content__buttons-date {
+  display: flex;
+  flex-direction: column;
+}
+
+.todo-list-content__date {
+  position: absolute;
+  top: 0px;
+  right: 25px;
+}

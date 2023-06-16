@@ -5,6 +5,7 @@
   --playfair-display: "Playfair Display", serif;
   --plus-jakarta-sans: "Plus Jakarta Sans", sans-serif;
   --primary-color: #333;
+  --secondary-color: #00d4a69c;
 }
 
 * {
@@ -32,15 +33,31 @@ body {
 
 .app {
   font-family: var(--plus-jakarta-sans);
-  background-color: white;
-  padding: 20px 30px;
+  border-radius: 0px;
+  background: linear-gradient(145deg, #cacaca, #f0f0f0);
+  box-shadow: 11px 11px 62px #d5d5d5, -11px -11px 62px #ebebeb;
   color: var(--primary-color);
   border-radius: 5px;
   border: 2px solid #acc6fc;
-  max-width: 700px;
+  min-width: 800px;
+  max-width: 800px;
   margin: 0 auto 300px;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.app input {
+  background-color: transparent;
+  font-size: 17px;
+}
+
+.app input:focus {
+  outline: none;
+}
+
+.app input::placeholder {
+  text-align: center;
+  color: #000;
 }
 
 .app h1 {
@@ -53,13 +70,12 @@ body {
 }
 
 button {
-  background-color: var(--primary-color);
-  background-color: #4a5ea1;
-  color: white;
+  background-color: var(--secondary-color);
+  color: rgb(0, 0, 0);
   padding: 5px 10px;
-
   border-radius: 3px;
   cursor: pointer;
+  border: 1px solid #0497779c;
   opacity: 0.8;
   transition: 0.3s;
   margin-right: 10px;

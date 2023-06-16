@@ -1,5 +1,13 @@
 .ToDoForm {
   padding-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ToDoForm-container {
+  width: 80%;
 }
 
 .ToDoForm-form input,
@@ -12,4 +20,8 @@
   border: none;
   border-bottom: 2px solid var(--primary-color);
   outline: none;
+}
+
+.editor {
+  height: 200px;
 }

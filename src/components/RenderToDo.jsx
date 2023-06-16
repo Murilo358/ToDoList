@@ -15,8 +15,13 @@ function RenderToDo({ todo, removeToDo, completeToDo }) {
         <p className="todo-list-content__category">
           Categoria: ({todo.category})
         </p>
-      </div>
-      <div className="buttons">
+        <div className="todo-list-content__description">
+          <p>Descrição:</p>
+          <div dangerouslySetInnerHTML={{ __html: todo.description }} />
+        </div>
+      </div>{" "}
+      <p className="todo-list-content__date">{todo.date}</p>
+      <div className="todo-list-content__buttons-date">
         {" "}
         <button onClick={() => completeToDo(todo.id)} className="complete">
           Completar
