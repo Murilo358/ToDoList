@@ -80,7 +80,7 @@ function App() {
   const [sortDate, setSortDate] = useState("Crescente");
 
   return (
-    <div className="app gx-0 container custom-container">
+    <div className="app ">
       <Search search={search} setSearch={setSearch} />
       <Filter
         filter={filter}
