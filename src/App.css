@@ -5,7 +5,7 @@
   --playfair-display: "Playfair Display", serif;
   --plus-jakarta-sans: "Plus Jakarta Sans", sans-serif;
   --primary-color: #333;
-  --secondary-color: #00d4a69c;
+  --secondary-color: #16d6ad;
 }
 
 * {
@@ -16,6 +16,10 @@
 input {
   border: none;
   border-bottom: 2px solid var(--primary-color);
+}
+
+.desktop-menu {
+  width: 300px;
 }
 
 .app {

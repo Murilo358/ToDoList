@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 import RenderToDo from "./components/RenderToDo";
-import RenderToDoForm from "./components/ToDoForm";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import SideBar from "./components/SideBar";
 import { GrMenu } from "react-icons/gr";
@@ -95,11 +95,15 @@ function App() {
       </div>
 
       <div className="app-content">
-        <div className="mobile-sidebar">
+        <div className="app-content-appName">
           <GrMenu
             className="mobile-sidebar-icon"
             onClick={() => setShowSideBar(!showSidebar)}
           />
+
+          <h1 className="app-name"> TaskMaster</h1>
+        </div>
+        <div className="mobile-sidebar">
           {showSidebar && (
             <SideBar
               search={search}
@@ -114,13 +118,15 @@ function App() {
               viewForm={viewForm}
             />
           )}
-          <div className="app-content-appName">
-            <h1 className="app-name"> TaskMaster</h1>
-          </div>
         </div>
 
         <div className="todo-list">
           <h1>Lista de tarefas</h1>
+          {todo.length === 0 && (
+            <p className="d-flex align-self-center">
+              Crie uma tarefa no menu ao lado
+            </p>
+          )}
           {todo
             .filter((todo) =>
               filter === "All"

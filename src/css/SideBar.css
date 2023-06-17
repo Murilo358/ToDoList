@@ -21,7 +21,7 @@
 }
 
 .sideBar-newTask__button {
-  margin: 30px 0 50px 0;
+  margin: 30px 0 30px 0;
   align-self: center;
 }
 
@@ -46,23 +46,45 @@
   .desktop-menu {
     display: none;
   }
+
+  .app-content-appName {
+    position: fixed;
+    z-index: 1;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
   .todo-list {
     padding: 15px;
+    margin-top: 120px;
   }
   .mobile-sidebar-icon,
   .close-sidebar__button {
     display: block;
-    position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 43px;
+
+    left: 10px;
     font-size: 35px;
   }
 
-  .sideBar {
-    z-index: 100;
+  .close-sidebar__button {
+    z-index: 2;
     position: absolute;
+  }
+  .mobile-sidebar-icon {
+    position: absolute;
+  }
+
+  .sideBar {
+    z-index: 3;
+    position: fixed;
     top: 0;
     width: 100%;
+    height: 100%;
+    overflow-y: auto;
     background-color: #d8d8d8;
     animation: showSideBar 0.3s;
   }

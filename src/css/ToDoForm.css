@@ -42,9 +42,13 @@
   border: none;
   outline: none;
 }
+.create-task__button {
+  background-color: #12d6128e;
+}
 
 .editor {
-  height: 200px;
+  height: 250px;
   width: 80%;
+  overflow: scroll;
   border: 1px solid var(--primary-color);
 }

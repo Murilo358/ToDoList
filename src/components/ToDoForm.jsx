@@ -27,9 +27,10 @@ function ToDoForm({ addToDo }) {
 
         <form onSubmit={handleSubmit} className="ToDoForm-form">
           <input
+            required
             value={title}
             onChange={(ev) => setTitle(ev.target.value)}
-            placeholder="Digite o titulo"
+            placeholder="Digite o nome da tarefa"
             className="ToDoForm-form__input"
             type="text"
           />
@@ -52,7 +53,9 @@ function ToDoForm({ addToDo }) {
             value={description}
             onChange={setDescription}
           />
-          <button type="submit">Criar tarefa</button>
+          <button className="create-task__button" type="submit">
+            Criar tarefa
+          </button>
         </form>
       </div>
     </div>
