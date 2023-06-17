@@ -8,12 +8,13 @@
 
 .delete {
   background-color: #f73852;
+  margin-left: 5px;
 }
 .todo-list-content__button {
   border-radius: 100%;
 }
 
-.todo-description {
+.todo-details {
   padding: 0 20px 0 20px;
   word-break: break-all;
 }
@@ -69,5 +70,11 @@
   .todo-list-container {
     display: flex;
     flex-direction: column;
+  }
+
+  .todo-list-content__buttons-date {
+    width: 100%;
+    gap: 5px;
+    justify-content: space-between;
   }
 }
