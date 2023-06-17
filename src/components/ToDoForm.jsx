@@ -24,6 +24,7 @@ function ToDoForm({ addToDo }) {
     <div className="ToDoForm">
       <div className="ToDoForm-container">
         <h2>Criar tarefa:</h2>
+
         <form onSubmit={handleSubmit} className="ToDoForm-form">
           <input
             value={title}
@@ -44,6 +45,7 @@ function ToDoForm({ addToDo }) {
             <option value="Pessoal">Pessoal</option>
             <option value="Estudos">Estudos</option>
           </select>
+          <h5>Descrição</h5>
           <ReactQuill
             className="editor"
             theme="snow"

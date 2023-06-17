@@ -7,16 +7,8 @@ function Filter({ filter, setFilter, setSort, setSortDate }) {
     <div className="filter">
       <h2>Filtrar</h2>
       <div className="filter-options">
-        <div className="filter-options-select">
-          <p>Por status</p>
-          <select value={filter} onChange={(ev) => setFilter(ev.target.value)}>
-            <option value="All">Todas</option>
-            <option value="Completed">Completas</option>
-            <option value="Incompleted">Incompletas</option>
-          </select>
-        </div>
         <div className="filter-options-buttons-div">
-          <p>Por data</p>
+          <p>Data</p>
           <div className="filter-option-buttons">
             <button
               onClick={() => {
@@ -34,8 +26,16 @@ function Filter({ filter, setFilter, setSort, setSortDate }) {
             </button>
           </div>
         </div>
+        <div className="filter-options-select">
+          <p>Status</p>
+          <select value={filter} onChange={(ev) => setFilter(ev.target.value)}>
+            <option value="All">Todas</option>
+            <option value="Completed">Completas</option>
+            <option value="Incompleted">Incompletas</option>
+          </select>
+        </div>
         <div className="filter-options-buttons-div">
-          <p>Alfabetica:</p>
+          <p>Alfabetica</p>
           <div className="filter-option-buttons">
             <button
               onClick={() => {

@@ -2,12 +2,18 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import RenderToDo from "./components/RenderToDo";
 import RenderToDoForm from "./components/ToDoForm";
-import Search from "./components/Search";
-import Filter from "./components/Filter";
 import "bootstrap/dist/css/bootstrap.min.css";
+import SideBar from "./components/SideBar";
+import { GrMenu } from "react-icons/gr";
 
 function App() {
   const [todo, setTodos] = useState([]);
+  const [search, setSearch] = useState("");
+  const [filter, setFilter] = useState("All");
+  const [sort, setSort] = useState("Crescente");
+  const [viewForm, setViewForm] = useState(false);
+  const [showSidebar, setShowSideBar] = useState(false);
+  const [sortDate, setSortDate] = useState("Crescente");
 
   useEffect(() => {
     const savedList = localStorage.getItem("list");
@@ -71,56 +77,81 @@ function App() {
     setTodos(newToDos);
   };
 
-  const [search, setSearch] = useState("");
-
-  const [filter, setFilter] = useState("All");
-
-  const [sort, setSort] = useState("Crescente");
-
-  const [sortDate, setSortDate] = useState("Crescente");
-
   return (
     <div className="app ">
-      <Search search={search} setSearch={setSearch} />
-      <Filter
-        filter={filter}
-        setFilter={setFilter}
-        setSort={setSort}
-        setSortDate={setSortDate}
-      />
-      <RenderToDoForm addToDo={addToDo} />
-      <h1>Lista de tarefas</h1>
-      <div className="todo-list">
-        {todo
-          .filter((todo) =>
-            filter === "All"
-              ? true
-              : filter === "Completed"
-              ? todo.isCompleted
-              : !todo.isCompleted
-          )
-          .filter((todo) =>
-            todo.text.toLowerCase().includes(search.toLowerCase())
-          )
-          .sort((a, b) =>
-            sort === "Crescente"
-              ? a.text.localeCompare(b.text)
-              : b.text.localeCompare(a.text)
-          )
-          .sort((a, b) =>
-            sortDate === "Crescente"
-              ? b.date.localeCompare(a.date)
-              : a.date.localeCompare(b.date)
-          )
+      <div className="desktop-menu">
+        <SideBar
+          search={search}
+          setSearch={setSearch}
+          filter={filter}
+          setFilter={setFilter}
+          setSort={setSort}
+          setSortDate={setSortDate}
+          setShowSideBar={setShowSideBar}
+          setViewForm={setViewForm}
+          addToDo={addToDo}
+          viewForm={viewForm}
+        />
+      </div>
 
-          .map((todo) => (
-            <RenderToDo
-              key={todo.id}
-              todo={todo}
-              removeToDo={removeToDo}
-              completeToDo={completeToDo}
+      <div className="app-content">
+        <div className="mobile-sidebar">
+          <GrMenu
+            className="mobile-sidebar-icon"
+            onClick={() => setShowSideBar(!showSidebar)}
+          />
+          {showSidebar && (
+            <SideBar
+              search={search}
+              setSearch={setSearch}
+              filter={filter}
+              setFilter={setFilter}
+              setSort={setSort}
+              setSortDate={setSortDate}
+              setShowSideBar={setShowSideBar}
+              setViewForm={setViewForm}
+              addToDo={addToDo}
+              viewForm={viewForm}
             />
-          ))}
+          )}
+          <div className="app-content-appName">
+            <h1 className="app-name"> TaskMaster</h1>
+          </div>
+        </div>
+
+        <div className="todo-list">
+          <h1>Lista de tarefas</h1>
+          {todo
+            .filter((todo) =>
+              filter === "All"
+                ? true
+                : filter === "Completed"
+                ? todo.isCompleted
+                : !todo.isCompleted
+            )
+            .filter((todo) =>
+              todo.text.toLowerCase().includes(search.toLowerCase())
+            )
+            .sort((a, b) =>
+              sort === "Crescente"
+                ? a.text.localeCompare(b.text)
+                : b.text.localeCompare(a.text)
+            )
+            .sort((a, b) =>
+              sortDate === "Crescente"
+                ? b.date.localeCompare(a.date)
+                : a.date.localeCompare(b.date)
+            )
+
+            .map((todo) => (
+              <RenderToDo
+                key={todo.id}
+                todo={todo}
+                removeToDo={removeToDo}
+                completeToDo={completeToDo}
+              />
+            ))}
+        </div>
       </div>
     </div>
   );

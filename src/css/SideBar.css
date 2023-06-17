@@ -1,0 +1,69 @@
+.close-sidebar__button {
+  display: none;
+}
+.search {
+  height: 115px;
+  padding-top: 50px;
+}
+
+.mobile-sidebar-icon {
+  display: none;
+}
+
+.close-mobile-sidebar-icon {
+  display: none;
+}
+
+.sideBar-newTask-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sideBar-newTask__button {
+  margin: 30px 0 50px 0;
+  align-self: center;
+}
+
+.desktop-menu {
+  flex: 0.8;
+}
+
+@keyframes showSideBar {
+  from {
+    opacity: 0;
+    width: 0;
+  }
+  to {
+    opacity: 1;
+    width: 100%;
+  }
+}
+
+@media (max-width: 880px) {
+  .desktop-menu {
+    display: none;
+  }
+  .todo-list {
+    padding: 15px;
+  }
+  .mobile-sidebar-icon,
+  .close-sidebar__button {
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 35px;
+  }
+
+  .sideBar {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+      rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: #d8d8d8;
+    animation: showSideBar 0.3s;
+  }
+}

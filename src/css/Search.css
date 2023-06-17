@@ -1,9 +1,12 @@
+.sideBar-search {
+  background-color: var(--secondary-color);
+}
+
 .search {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--secondary-color);
   width: 100%;
 }
 
