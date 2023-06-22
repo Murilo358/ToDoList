@@ -1,9 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,900&display=swap");
 
 :root {
-  --playfair-display: "Playfair Display", serif;
-  --plus-jakarta-sans: "Plus Jakarta Sans", sans-serif;
+  --poppins: "Poppins", sans-serif;
   --primary-color: #333;
   --secondary-color: #16d6ad;
 }
@@ -12,6 +10,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: var(--poppins);
 }
 .app input {
   border: none;
@@ -25,8 +24,6 @@
 }
 
 .app {
-  font-family: var(--plus-jakarta-sans);
-
   background-image: url("./assets/appBG.svg");
   background-position: center;
   background-repeat: no-repeat;
@@ -117,18 +114,10 @@
   opacity: 1;
 }
 
-.filter {
-  border-bottom: 1px solid var(--primary-color);
-}
-
-.filter button:focus {
-  background-color: #5a03fd9c;
-}
-
 .filter,
 .search {
-  margin-bottom: 20px;
-  padding-bottom: 20px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
 }
 
 .app-content-appName {

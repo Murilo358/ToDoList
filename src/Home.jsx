@@ -40,7 +40,7 @@ function Home() {
             onClick={() => setShowSideBar(!showSidebar)}
           />
 
-          <h1 className="app-name"> TaskMaster</h1>
+          <h1 className="app-name "> TaskMaster</h1>
         </div>
         <div className="mobile-sidebar">
           {showSidebar && (
@@ -63,7 +63,7 @@ function Home() {
 
           {loading && <ImSpinner9 className="spinner" />}
           {tasks && tasks.length === 0 && (
-            <p className="d-flex align-self-center">
+            <p className="d-flex align-self-center ">
               Crie uma tarefa no menu ao lado
             </p>
           )}

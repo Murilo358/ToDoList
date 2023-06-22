@@ -8,6 +8,8 @@
 .app-content-appName {
   height: 60px;
   align-items: end;
+  font-weight: 900;
+  font-style: italic;
 }
 
 .mobile-sidebar-icon {
@@ -34,6 +36,10 @@
   font-size: 20px;
 }
 
+.sideBar-newTask-container button:hover {
+  scale: 1.2;
+}
+
 .sideBar-newTask__button {
   margin-top: 10px;
   align-self: center;
@@ -41,7 +47,7 @@
 
 .desktop-menu {
   flex: 0.8;
-  background-color: #ffffff3b;
+  background-color: #cfcfcf9d;
 }
 
 @keyframes showSideBar {

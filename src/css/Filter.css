@@ -1,12 +1,16 @@
-.filter-options p {
-  margin-bottom: 20px;
-}
-
 .filter {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.filter {
+  border-bottom: 1px groove var(--primary-color);
+}
+
+.filter button:focus {
+  background-color: #5a03fd9c;
 }
 
 .filter-options {
@@ -28,6 +32,6 @@
   width: 70%;
   background-color: #e6f1ef7c;
   color: rgb(0, 0, 0);
-  font-size: 20px;
+  font-size: 18px;
   text-align: center;
 }

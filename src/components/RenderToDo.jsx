@@ -21,9 +21,7 @@ function RenderToDo({ todo }) {
         }`}
       >
         <div className="todo-list-content">
-          <p className="todo-list-content__text">
-            Para fazer: {todo.todo.title}
-          </p>
+          <p className="todo-list-content__text">Tarefa: {todo.todo.title}</p>
         </div>{" "}
         <p className="todo-list-content__date">
           {todo.todo.createdAt.toDate().toLocaleString().slice(0, 10)}
