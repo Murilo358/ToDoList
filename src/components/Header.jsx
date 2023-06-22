@@ -13,7 +13,9 @@ function Header() {
     <>
       <Nav
         sticky="top"
-        className={`justify-content-end ps-2 pe-2 ${!user ? "box-shadow" : ""}`}
+        className={`justify-content-end  ps-2 pe-2 ${
+          !user ? "login-register-nav" : "homepage-nav"
+        }`}
       >
         {" "}
         <div className="d-flex">

@@ -2,11 +2,12 @@
   display: none;
 }
 .search {
-  height: 130px;
-  padding-top: 50px;
+  height: 60px;
+  padding-top: 10px;
 }
 .app-content-appName {
-  height: 130px;
+  height: 60px;
+  align-items: end;
 }
 
 .mobile-sidebar-icon {
@@ -27,6 +28,12 @@
   justify-content: center;
 }
 
+.sideBar-newTask-container button {
+  background-color: #5a00ad;
+  color: rgb(255, 238, 0);
+  font-size: 20px;
+}
+
 .sideBar-newTask__button {
   margin: 30px 0 30px 0;
   align-self: center;
@@ -34,6 +41,7 @@
 
 .desktop-menu {
   flex: 0.8;
+  background-color: #ffffff3b;
 }
 
 @keyframes showSideBar {
@@ -47,7 +55,7 @@
   }
 }
 
-@media (max-width: 880px) {
+@media (max-width: 1000px) {
   .desktop-menu {
     display: none;
   }
@@ -62,7 +70,7 @@
     position: fixed;
     display: flex;
     justify-content: center;
-    align-items: center;
+
     width: 100%;
   }
 
@@ -74,7 +82,6 @@
   .close-sidebar__button {
     display: block;
     top: 43px;
-
     left: 10px;
     font-size: 35px;
   }
@@ -87,6 +94,17 @@
     position: absolute;
   }
 
+  .Link {
+    font-size: 13px;
+  }
+
+  .search {
+    height: 85px;
+  }
+  .app-content-appName {
+    height: 85px;
+  }
+
   .sideBar {
     z-index: 3;
     position: fixed;
@@ -94,7 +112,7 @@
     width: 100%;
     height: 100%;
     overflow-y: auto;
-    background-color: #d8d8d8;
+    background-color: #dcc8f5;
     animation: showSideBar 0.3s;
   }
 }

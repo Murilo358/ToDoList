@@ -3,7 +3,7 @@ import Filter from "./Filter";
 import { GrClose } from "react-icons/gr";
 import "../css/SideBar.css";
 import RenderToDoForm from "./ToDoForm";
-import { AiOutlinePlus } from "react-icons/ai";
+
 function SideBar({
   search,
   setSearch,
@@ -32,17 +32,7 @@ function SideBar({
         setSortDate={setSortDate}
       />
       <div className="sideBar-newTask-container">
-        <button
-          className="sideBar-newTask__button"
-          onClick={() => setViewForm(!viewForm)}
-        >
-          Criar nova tarefa <AiOutlinePlus />
-        </button>
-        {viewForm && (
-          <>
-            <RenderToDoForm addToDo={addToDo} />
-          </>
-        )}
+        <RenderToDoForm />
       </div>
     </div>
   );

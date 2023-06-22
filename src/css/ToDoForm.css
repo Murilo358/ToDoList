@@ -48,11 +48,15 @@
 }
 .app .create-task__button {
   background-color: #12d6128e;
+  color: #000000;
+  margin-top: 10px;
+  border: 1px solid #006405;
 }
 
 .editor {
-  height: 250px;
   width: 80%;
-  overflow: scroll;
-  border: 1px solid var(--primary-color);
+  background-color: #ffffff56;
+}
+.ql-editor {
+  min-height: 200px;
 }

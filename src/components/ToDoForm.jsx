@@ -5,10 +5,11 @@ import { useAuthValue } from "../contexts/AuthContext";
 import "react-quill/dist/quill.snow.css";
 import { ImSpinner9 } from "react-icons/im";
 import Swal from "sweetalert2";
-import { useAuthentication } from "../hooks/useAuthentication";
+import { AiOutlinePlus } from "react-icons/ai";
+
 import { useInsertTasks } from "../hooks/useInsertTasks";
 
-function ToDoForm({ addToDo }) {
+function ToDoForm() {
   const [description, setDescription] = useState("");
   const [title, setTitle] = useState("");
   const [category, setCategory] = useState("");
@@ -31,6 +32,7 @@ function ToDoForm({ addToDo }) {
         text: "Preencha todos os campos!",
       });
       return;
+      z;
     }
     insertDocument({
       title,
@@ -88,9 +90,11 @@ function ToDoForm({ addToDo }) {
 
           {formError && <p className="error">{formError}</p>}
           {!response.loading && (
-            <button className="create-task__button" type="submit">
-              {" "}
-              Criar tarefa
+            <button
+              className="sideBar-newTask__button"
+              onClick={() => setViewForm(!viewForm)}
+            >
+              Criar nova tarefa <AiOutlinePlus />
             </button>
           )}
           {response.loading && (
