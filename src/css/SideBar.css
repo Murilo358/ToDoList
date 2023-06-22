@@ -2,8 +2,11 @@
   display: none;
 }
 .search {
-  height: 115px;
+  height: 130px;
   padding-top: 50px;
+}
+.app-content-appName {
+  height: 130px;
 }
 
 .mobile-sidebar-icon {
@@ -12,6 +15,10 @@
 
 .close-mobile-sidebar-icon {
   display: none;
+}
+.nav {
+  position: absolute;
+  z-index: 3;
 }
 
 .sideBar-newTask-container {
@@ -27,8 +34,6 @@
 
 .desktop-menu {
   flex: 0.8;
-  box-shadow: rgba(0, 0, 0, 0.068) 5px 0px 10px,
-    rgba(0, 0, 0, 0.062) 5px 0px 10px;
 }
 
 @keyframes showSideBar {
@@ -45,6 +50,10 @@
 @media (max-width: 880px) {
   .desktop-menu {
     display: none;
+  }
+
+  .nav {
+    position: fixed;
   }
 
   .app-content-appName {

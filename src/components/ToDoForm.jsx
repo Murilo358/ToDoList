@@ -1,20 +1,54 @@
 import { useState } from "react";
 import "../css/ToDoForm.css";
 import ReactQuill from "react-quill";
+import { useAuthValue } from "../contexts/AuthContext";
 import "react-quill/dist/quill.snow.css";
-import dayjs from "dayjs";
+import { ImSpinner9 } from "react-icons/im";
+import Swal from "sweetalert2";
+import { useAuthentication } from "../hooks/useAuthentication";
+import { useInsertTasks } from "../hooks/useInsertTasks";
 
 function ToDoForm({ addToDo }) {
   const [description, setDescription] = useState("");
   const [title, setTitle] = useState("");
   const [category, setCategory] = useState("");
+  const [formError, setFormError] = useState("");
+  const [success, setSuccess] = useState(false);
+  const { user } = useAuthValue();
+
+  const { insertDocument, response } = useInsertTasks("tasks");
 
   const handleSubmit = (ev) => {
     ev.preventDefault();
-    if (!title || !category || !description) return;
-    //Adicionar toDo e limpar os campos
-    const date = dayjs().format("DD-MM-YYYY");
-    addToDo(title, category, description, date);
+    setFormError("");
+    setSuccess("");
+    //Insert to db
+
+    if (!title || !category || !description) {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Preencha todos os campos!",
+      });
+      return;
+    }
+    insertDocument({
+      title,
+      category,
+      description,
+      uid: user.uid,
+      createdBy: user.displayName,
+      isCompleted: false,
+    });
+
+    if (insertDocument) {
+      Swal.fire({
+        icon: "success",
+        title: "Tarefa criada",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+    }
     setTitle("");
     setCategory("");
     setDescription("");
@@ -27,7 +61,6 @@ function ToDoForm({ addToDo }) {
 
         <form onSubmit={handleSubmit} className="ToDoForm-form">
           <input
-            required
             value={title}
             onChange={(ev) => setTitle(ev.target.value)}
             placeholder="Digite o nome da tarefa"
@@ -36,7 +69,6 @@ function ToDoForm({ addToDo }) {
           />
           <select
             value={category}
-            required
             onChange={(ev) => setCategory(ev.target.value)}
           >
             <option disabled value="">
@@ -53,9 +85,20 @@ function ToDoForm({ addToDo }) {
             value={description}
             onChange={setDescription}
           />
-          <button className="create-task__button" type="submit">
-            Criar tarefa
-          </button>
+
+          {formError && <p className="error">{formError}</p>}
+          {!response.loading && (
+            <button className="create-task__button" type="submit">
+              {" "}
+              Criar tarefa
+            </button>
+          )}
+          {response.loading && (
+            <button className="create-task__button" disabled>
+              <ImSpinner9 className="spinner" />{" "}
+            </button>
+          )}
+          {response.error && <p className="error">{response.error}</p>}
         </form>
       </div>
     </div>

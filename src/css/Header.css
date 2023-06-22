@@ -1,0 +1,36 @@
+.Link {
+  color: #000;
+  outline: none;
+  text-decoration: none;
+}
+
+.hello-user p {
+  margin-bottom: 0;
+}
+
+.hello-user button {
+  background-color: transparent;
+  border: none;
+  font-weight: bold;
+}
+
+.Link:hover {
+  border-bottom: 2px solid #000;
+}
+
+.box-shadow {
+  height: 40px;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.dropdown-menu {
+  --bs-dropdown-link-active-bg: #fff;
+}
+.nav {
+  width: 100%;
+  --bs-nav-link-color: #000;
+  --bs-nav-link-hover-color: #fff;
+  background-color: var(--secondary-color);
+}

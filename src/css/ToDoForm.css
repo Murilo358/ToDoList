@@ -11,15 +11,19 @@
   from {
     opacity: 0;
     height: 0;
+    transform: translateY(-1.25em);
   }
   to {
     opacity: 1;
     height: 100%;
+
+    transform: translateY(0);
   }
 }
 
 .ToDoForm-container {
   width: 100%;
+
   text-align: center;
 }
 
@@ -42,7 +46,7 @@
   border: none;
   outline: none;
 }
-.create-task__button {
+.app .create-task__button {
   background-color: #12d6128e;
 }
 
