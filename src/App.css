@@ -17,7 +17,9 @@
   border: none;
   border-bottom: 2px solid var(--primary-color);
 }
-
+.app h2 {
+  font-size: 20px;
+}
 .desktop-menu {
   width: 300px;
 }

@@ -1,5 +1,4 @@
 .ToDoForm {
-  padding: 1.5rem 0px 1.5rem 0px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -58,5 +57,5 @@
   background-color: #ffffff56;
 }
 .ql-editor {
-  min-height: 200px;
+  min-height: 150px;
 }
