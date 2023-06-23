@@ -14,6 +14,7 @@
 }
 .app input {
   border: none;
+  color: white;
   border-bottom: 2px solid var(--primary-color);
 }
 .app h2 {
@@ -73,7 +74,7 @@
 }
 
 .app input {
-  background-color: #e6f1ef7c;
+  background-color: #57248a9d;
   font-size: 17px;
 }
 
@@ -81,14 +82,14 @@
   outline: none;
 }
 
-.Logo {
-  width: 35px;
-  height: 35px;
+.app input:focus::placeholder {
+  color: transparent;
 }
 
 .app input::placeholder {
   text-align: center;
-  color: #000;
+  font-size: 15px;
+  color: white;
 }
 
 .app h1 {
@@ -103,11 +104,9 @@
   padding: 5px 10px;
   border-radius: 3px;
   cursor: pointer;
-
-  border: 2px solid #6704e99c;
+  border: none;
   opacity: 0.8;
   transition: 0.3s;
-  margin-right: 10px;
 }
 
 .app button:hover {
@@ -130,14 +129,17 @@
 
 .app select {
   appearance: none;
-  background-color: #e6f1ef7c;
+  background-color: #57248a9d;
   border: none;
-  border-bottom: 2px solid #5a03fd9c;
+  color: white;
+  border-radius: 3px;
+  border-bottom: 3px solid #5a03fd9c;
   margin: 0;
   font-family: inherit;
   font-size: inherit;
   cursor: pointer;
   line-height: inherit;
+  font-size: 15px;
 }
 
 .app select:focus {
@@ -145,5 +147,9 @@
 }
 
 .app select option {
-  background-color: #dadada;
+  background-color: #8d56f5;
+}
+
+.app select option:disabled {
+  color: rgb(0, 0, 0);
 }

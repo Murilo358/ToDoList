@@ -32,7 +32,6 @@ function ToDoForm() {
         text: "Preencha todos os campos!",
       });
       return;
-      z;
     }
     insertDocument({
       title,
@@ -59,7 +58,7 @@ function ToDoForm() {
   return (
     <div className="ToDoForm">
       <div className="ToDoForm-container">
-        <h2>Criar tarefa:</h2>
+        <h2>CRIAR TAREFA</h2>
 
         <form onSubmit={handleSubmit} className="ToDoForm-form">
           <input
@@ -80,12 +79,26 @@ function ToDoForm() {
             <option value="Pessoal">Pessoal</option>
             <option value="Estudos">Estudos</option>
           </select>
-          <h5>Descrição</h5>
+          <h5>DESCRIÇÃO</h5>
+
           <ReactQuill
-            className="editor"
-            theme="snow"
             value={description}
             onChange={setDescription}
+            className="editor"
+            modules={{
+              toolbar: [
+                [{ header: [1, 2, false] }],
+                [{ font: [] }],
+                ["bold", "italic", "underline", "strike"],
+                [{ color: [] }],
+                [{ background: [] }],
+                [{ align: [] }],
+                [{ list: "ordered" }, { list: "bullet" }],
+                ["link", "image"],
+                ["clean"],
+                [{ "custom-toolbar-button": [] }],
+              ],
+            }}
           />
 
           {formError && <p className="error">{formError}</p>}
@@ -98,7 +111,7 @@ function ToDoForm() {
             </button>
           )}
           {response.loading && (
-            <button className="create-task__button" disabled>
+            <button className="sideBar-newTask__button" disabled>
               <ImSpinner9 className="spinner" />{" "}
             </button>
           )}

@@ -23,6 +23,11 @@
   word-break: break-all;
 }
 
+.todo-details img {
+  max-width: 100%;
+  height: 100%;
+}
+
 .todo-list {
   margin-bottom: 20px;
   row-gap: 12px;

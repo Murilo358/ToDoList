@@ -5,7 +5,7 @@ import { IoChevronUp, IoChevronDownSharp } from "react-icons/io5";
 function Filter({ filter, setFilter, setSort, setSortDate }) {
   return (
     <div className="filter">
-      <h2>Filtrar</h2>
+      <h2>FILTRAR</h2>
       <div className="filter-options">
         <div className="filter-options-buttons-div">
           <p>Data</p>

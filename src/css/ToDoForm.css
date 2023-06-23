@@ -22,7 +22,6 @@
 
 .ToDoForm-container {
   width: 100%;
-
   text-align: center;
 }
 
@@ -54,8 +53,27 @@
 
 .editor {
   width: 80%;
-  background-color: #ffffff56;
+  background-color: transparent;
+  border: none;
 }
 .ql-editor {
   min-height: 150px;
+}
+
+.ql-container.ql-snow {
+  border: 1px solid #4700a3 !important;
+}
+
+.ql-toolbar.ql-snow {
+  border: 1px solid #4700a3 !important;
+  border-bottom: none !important;
+}
+.ql-picker-label {
+  color: #e9e9e9;
+}
+.ql-toolbar {
+  background-color: #57248a9d;
+}
+.ql-toolbar .ql-stroke {
+  stroke: #e9e9e9 !important;
 }

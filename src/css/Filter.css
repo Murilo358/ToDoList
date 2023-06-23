@@ -5,10 +5,6 @@
   align-items: center;
 }
 
-.filter {
-  border-bottom: 1px groove var(--primary-color);
-}
-
 .filter button:focus {
   background-color: #5a03fd9c;
 }
@@ -16,22 +12,28 @@
 .filter-options {
   display: flex;
   width: 100%;
-  align-items: center;
 }
 .filter-option-buttons button {
   background-color: #e6f1ef63;
+  color: white;
+}
+.filter-option-buttons {
+  gap: 10px;
+  display: flex;
+  justify-content: center;
 }
 
 .filter-options-buttons-div,
 .filter-options-select {
   text-align: center;
+
   flex: 1;
 }
 
 .filter-options-select select {
   width: 70%;
-  background-color: #e6f1ef7c;
-  color: rgb(0, 0, 0);
+  background-color: #d9d3e263;
+  color: #dbdbdb;
   font-size: 18px;
   text-align: center;
 }
