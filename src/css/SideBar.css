@@ -5,9 +5,7 @@
   height: 60px;
   padding-top: 10px;
 }
-.sideBar h5 {
-  color: rgb(255, 255, 255);
-}
+
 .app-content-appName {
   height: 60px;
   align-items: end;
@@ -37,6 +35,7 @@
   background-color: #5a00ad;
   color: rgb(255, 238, 0);
   font-size: 20px;
+  opacity: 0.9;
   font-weight: bold;
 }
 
@@ -50,19 +49,12 @@
 }
 .sideBar h2 {
   font-weight: 600;
-  color: var(--secondary-color);
 }
 
 .desktop-menu {
   flex: 0.8;
   box-shadow: 10px 0 5px -2px #3a3a3a48;
-  background: rgb(95, 0, 232);
-  background: linear-gradient(
-    1deg,
-    rgba(97, 0, 232, 0.701) 0%,
-    rgba(151, 84, 251, 0.701) 50%,
-    rgba(124, 91, 180, 0.701) 99%
-  );
+  background-color: #ffffff34;
 
   color: rgb(0, 0, 0);
 }

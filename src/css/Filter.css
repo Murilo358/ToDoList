@@ -15,7 +15,7 @@
 }
 .filter-option-buttons button {
   background-color: #e6f1ef63;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 .filter-option-buttons {
   gap: 10px;
@@ -33,7 +33,7 @@
 .filter-options-select select {
   width: 70%;
   background-color: #d9d3e263;
-  color: #dbdbdb;
+  color: #020202;
   font-size: 18px;
   text-align: center;
 }

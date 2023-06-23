@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { useAuthentication } from "../../hooks/useAuthentication";
-
+import { ImSpinner9 } from "react-icons/im";
 import RegisterImg from "../../assets/RegisterImg.svg";
 import "../LoginAndRegister.css";
 
@@ -100,7 +100,11 @@ function Register() {
             </label>
 
             {!loading && <button>Cadastrar</button>}
-            {loading && <button disabled>Carregando...</button>}
+            {loading && (
+              <button disabled>
+                <ImSpinner9 className="spinner" />{" "}
+              </button>
+            )}
             {success && (
               <p className="success">Usuario registrado com sucesso!!</p>
             )}

@@ -68,7 +68,7 @@ function Login() {
 
             {!loading && <button>Entrar</button>}
             {loading && (
-              <button>
+              <button disabled>
                 <ImSpinner9 className="spinner" />{" "}
               </button>
             )}
