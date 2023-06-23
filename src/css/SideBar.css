@@ -5,7 +5,9 @@
   height: 60px;
   padding-top: 10px;
 }
-
+.sideBar h5 {
+  color: rgb(255, 255, 255);
+}
 .app-content-appName {
   height: 60px;
   align-items: end;
@@ -48,7 +50,6 @@
 }
 .sideBar h2 {
   font-weight: 600;
-
   color: var(--secondary-color);
 }
 
