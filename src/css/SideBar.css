@@ -50,9 +50,16 @@
   align-self: center;
 }
 .sideBar h2 {
-  font-weight: 600;
+  font-weight: 500;
+  color: rgb(1, 212, 167);
 }
 
+.filter {
+  border-bottom: 1px solid #7700ff;
+}
+h5 {
+  font-size: medium;
+}
 .desktop-menu {
   flex: 0.8;
   box-shadow: 10px 0 5px -2px #3a3a3a48;
