@@ -31,9 +31,7 @@
 
 :white_check_mark: `Funcionalidade 3:` Implementar o react quill para a descrição
 
-:white_check_mark: `Funcionalidade 3:` Salvar as listas em local storage
-
-:x: `Funcionalidade 4:` Migrar para salvar as listas no Firebase
+:white_check_mark: `Funcionalidade 4:` Salvar as tarefas e usuários no Firebase
 
 :construction: Estilização em andamento
 
