@@ -1,6 +1,6 @@
 <hr>
 <p align="center">
-   <img src="http://img.shields.io/static/v1?label=STATUS&message=EM-DESENVOLVIMENTO&color=RED&style=for-the-badge" #vitrine/>
+   <img src="http://img.shields.io/static/v1?label=STATUS&message=FINALIZADO&color=RED&style=for-the-badge" #vitrine/>
 </p>
 <hr>
 
@@ -19,8 +19,7 @@
 
 <p align="justify">
 
-  Desfrute de uma todo-list feita com React, que permite organizar suas tarefas com facilidade. Com essa aplicação, você tem a flexibilidade de classificá-las por data, ordem alfabética, completas e incompletas, tornando a sua organização ainda mais eficiente.
-
+Aproveite uma lista de tarefas completa desenvolvida com React, que permite organizar suas atividades de forma fácil e prática através de uma conta integrada ao Firebase. Com esta aplicação, você terá a flexibilidade de classificar suas tarefas por data, ordem alfabética, status de conclusão, proporcionando uma organização ainda mais eficiente.
 </p>
 
 ## Funcionalidades
