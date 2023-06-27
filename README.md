@@ -32,8 +32,6 @@ Aproveite uma lista de tarefas completa desenvolvida com React, que permite orga
 
 :white_check_mark: `Funcionalidade 4:` Salvar as tarefas e usuários no Firebase
 
-:construction: Estilização em andamento
-
 
 ## Ferramentas-utilizadas
 
