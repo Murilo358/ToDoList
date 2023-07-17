@@ -1,4 +1,4 @@
-import { db } from "../services/firebaseConfig";
+
 
 import {
   getAuth,
